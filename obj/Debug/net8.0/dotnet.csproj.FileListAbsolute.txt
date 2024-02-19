@@ -12,3 +12,4 @@
 /Users/mad/Desktop/dev/dotnet/obj/Debug/net8.0/dotnet.pdb
 /Users/mad/Desktop/dev/dotnet/obj/Debug/net8.0/dotnet.genruntimeconfig.cache
 /Users/mad/Desktop/dev/dotnet/obj/Debug/net8.0/ref/dotnet.dll
+/Users/mad/Desktop/dev/dotnet/obj/Debug/net8.0/dotnet.sourcelink.json

@@ -1,18 +1,25 @@
-﻿var fullName = "B-29 Super Fortess";
-var token = fullName.Split(" ");
-var model = token[0];
-Console.WriteLine(model);
+﻿using System;
 
-class FullName
+namespace MyApp
 {
-    public FullName(string firstName, string lastName)
+    class Program
     {
-        FirstName = firstName;
-        LastName = lastName;
+        static void Main(string[] args)
+        {
+            var fullname = new FullName("Super", "Fortess");
+            Console.WriteLine($"Full Name: {fullName.FirstName} {fullName.LastName}");
+        }
     }
-    
-    public string FirstName {get;}
-    public string LastName {get;}
-} 
 
-var fullName = new FullName("Super", "Fortess");
+    class FullName
+    {   
+        public FullName(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+        
+        public string FirstName {get;}
+        public string LastName {get;}
+    } 
+} 
