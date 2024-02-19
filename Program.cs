@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿var fullName = "B-29 Super Fortess";
+var token = fullName.Split(" ");
+var model = token[0];
+Console.WriteLine(model);
