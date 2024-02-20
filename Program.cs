@@ -8,6 +8,9 @@ namespace MyApp
         {
             var fullName = new FullName("Super", "Fortess");
             Console.WriteLine($"Full Name: {fullName.FirstName} {fullName.LastName}");
+
+            var someMoney = new Money(1000, "won");
+            Console.WriteLine($"Amount: {someMoney.Amount}, Currency: {someMoney.Currency}");
         }
     }
 
@@ -37,7 +40,7 @@ namespace MyApp
             if (obj.GetType() != this.GetType()) return false;
             return Equals((FullName)obj);
         }
-        
+
         public override int GetHashCode()
         {
             unchecked
@@ -46,5 +49,18 @@ namespace MyApp
                        ^ (LastName != null ? LastName.GetHashCode() : 0);
             }
         }
+    }
+
+    class Money
+    {
+        public Money(decimal amount, string currency)
+        {
+            if (currency == null) throw new ArgumentException(nameof(currency));
+            Amount = amount;
+            Currency = currency;
+        }
+
+        public decimal Amount { get; }
+        public string Currency { get; }
     }
 }
