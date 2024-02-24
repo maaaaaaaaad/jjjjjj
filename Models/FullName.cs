@@ -14,14 +14,14 @@ namespace MyApp.Models
 
         public string LastName { get; }
 
-        public bool Equals(FullName other)
+        public bool Equals(FullName? other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
             return string.Equals(FirstName, other.FirstName) && string.Equals(LastName, other.LastName);
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
