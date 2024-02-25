@@ -1,7 +1,7 @@
 ﻿using System.Reflection.Metadata.Ecma335;
-using MyApp.Models;
+using dotnet.Models;
 
-namespace MyApp
+namespace dotnet
 {
     class Program
     {

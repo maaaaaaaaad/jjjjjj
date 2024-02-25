@@ -1,4 +1,4 @@
-namespace MyApp.Models
+namespace dotnet.Models
 {
     public class ModelNumber
     {
