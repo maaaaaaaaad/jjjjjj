@@ -18,7 +18,7 @@ namespace dotnet
             Console.WriteLine(result);
 
             var userName = new UserName("MAD");
-            var userNameValue = userName.ToString();
+            var userNameValue = userName.UserNameValue;
             Console.WriteLine(userNameValue);
         }
     }

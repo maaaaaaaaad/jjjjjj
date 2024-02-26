@@ -6,14 +6,9 @@ public class UserName
 
     public UserName(string value)
     {
-        this.value = value ?? throw new ArgumentNullException(nameof(value));
         if (value.Length < 3) throw new ArgumentException("only strings with 3 characters or less are allowed.");
-
-        this.value = value;
+        this.UserNameValue = value ?? throw new ArgumentNullException(nameof(value));
     }
 
-    public override string ToString()
-    {
-        return this.value;
-    }
+    public string UserNameValue { get; }
 }
