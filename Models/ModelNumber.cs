@@ -1,31 +1,30 @@
-namespace dotnet.Models
+namespace dotnet.Models;
+
+public class ModelNumber
 {
-    public class ModelNumber
+    private readonly string productCode;
+    private readonly string branch;
+    private readonly string lot;
+
+    private static T ValidateNotNull<T>(T value, string paramName)
     {
-        private readonly string productCode;
-        private readonly string branch;
-        private readonly string lot;
-
-        private static T ValidateNotNull<T>(T value, string paramName)
+        if (value == null)
         {
-            if (value == null)
-            {
-                throw new ArgumentNullException(paramName);
-            }
-
-            return value;
+            throw new ArgumentNullException(paramName);
         }
 
-        public ModelNumber(string productCode, string branch, string lot)
-        {
-            this.productCode = ValidateNotNull(productCode, nameof(productCode));
-            this.branch = ValidateNotNull(branch, nameof(branch));
-            this.lot = ValidateNotNull(lot, nameof(lot));
-        }
+        return value;
+    }
 
-        public override string ToString()
-        {
-            return this.productCode + "-" + this.branch + "-" + this.lot;
-        }
+    public ModelNumber(string productCode, string branch, string lot)
+    {
+        this.productCode = ValidateNotNull(productCode, nameof(productCode));
+        this.branch = ValidateNotNull(branch, nameof(branch));
+        this.lot = ValidateNotNull(lot, nameof(lot));
+    }
+
+    public override string ToString()
+    {
+        return this.productCode + "-" + this.branch + "-" + this.lot;
     }
 }
