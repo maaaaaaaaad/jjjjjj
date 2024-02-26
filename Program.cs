@@ -16,6 +16,10 @@ namespace dotnet
             var modelNumber = new ModelNumber("v1", "seoul", "1010101");
             var result = modelNumber.ToString();
             Console.WriteLine(result);
+
+            var userName = new UserName("MAD");
+            var userNameValue = userName.ToString();
+            Console.WriteLine(userNameValue);
         }
     }
 }
