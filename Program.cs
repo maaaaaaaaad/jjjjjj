@@ -19,6 +19,16 @@ namespace dotnet
 
             var userName = new UserName("MAD");
             Console.WriteLine(userName.ToString());
+
+            User CreateUser(UserName name)
+            {
+                var user = new User();
+                user.Name = name;
+                return user;
+            }
+
+            var user = CreateUser(new UserName("Integral"));
+            Console.WriteLine($"id: {user.Id}, name: {user.Name}");
         }
     }
 }
